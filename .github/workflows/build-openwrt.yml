@@ -64,10 +64,9 @@ jobs:
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
     - name: Import external feeds
-      working-directory: ./openwrt
       run: |
-        git clone https://github.com/Lienol/openwrt-package package/lienol
-        git clone https://github.com/vernesong/OpenClash package/OpenClash
+        git clone https://github.com/Lienol/openwrt-package openwrt/package/lienol
+        git clone https://github.com/vernesong/OpenClash openwrt/package/OpenClash
  
 
       
