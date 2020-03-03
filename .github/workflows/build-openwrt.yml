@@ -65,8 +65,8 @@ jobs:
 
     - name: Import external feeds
       run: |
-        git clone https://github.com/Lienol/openwrt-package package/lienol
-        git clone https://github.com/vernesong/OpenClash package/OpenClash
+        git clone https://github.com/Lienol/openwrt-package openwrt/package/lienol
+        git clone https://github.com/vernesong/OpenClash openwrt/package/OpenClash
  
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
