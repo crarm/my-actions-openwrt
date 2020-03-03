@@ -2,13 +2,13 @@
 #=======================================
 #删除lienol与lean包中的重复程序
 #=======================================
-rm -rf package/lienol/lienol/ipt2socks
-rm -rf package/lienol/lienol/shadowsocksr-libev
-rm -rf package/lienol/lienol/pdnsd-alt
-rm -rf package/lienol/package/verysync
-rm -rf package/lienol/package/ipt2socks
-rm -rf package/lienol/lienol/luci-app-verysync
-rm -rf package/lienol/package/kcptunkcptun
+#rm -rf package/lienol/lienol/ipt2socks
+#rm -rf package/lienol/lienol/shadowsocksr-libev
+#rm -rf package/lienol/lienol/pdnsd-alt
+#rm -rf package/lienol/package/verysync
+#rm -rf package/lienol/package/ipt2socks
+#rm -rf package/lienol/lienol/luci-app-verysync
+#rm -rf package/lienol/package/kcptunkcptun
 rm -rf package/lean/pdnsd-alt
 rm -rf package/lean/shadowsocksr-libev
 rm -rf package/lean/simple-obfs
