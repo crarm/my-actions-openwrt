@@ -1,0 +1,40 @@
+#!/bin/bash
+#=======================================
+#delete the same packages bettwen lienol and lean 
+#=======================================
+rm -rf package/lienol/package/ipt2socks
+rm -rf package/lienol/package/shadowsocksr-libev
+rm -rf package/lienol/package/pdnsd-alt
+rm -rf package/lienol/package/verysync
+rm -rf package/lienol/package/ipt2socks
+rm -rf package/lienol/lienol/luci-app-verysync
+rm -rf package/lienol/package/kcptunkcptun
+rm -rf package/lean/pdnsd-alt
+rm -rf package/lean/shadowsocksr-libev
+rm -rf package/lean/simple-obfs
+rm -rf package/lean/trojan
+rm -rf package/lean/v2ray
+rm -rf package/lean/v2ray-plugin
+rm -rf package/lean/luci-app-ipsec-vpnd
+rm -rf package/lean/luci-app-kodexplorer
+rm -rf package/lean/luci-app-pppoe-relayls
+rm -rf package/lean/luci-app-pptp-server
+rm -rf package/lean/luci-app-ramfree
+rm -rf package/lean/luci-app-softethervpn
+rm -rf package/lean/luci-app-v2ray-server
+#config the IP 
+sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
+#change luci-app-ssr-plus to vpn menu
+sed -i 's/"services"/"vpn"/g' package/lean/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua
+#change luci-app-openclash to vpn menu
+sed -i 's/"services"/"vpn"/g' package/OpenClash/luci-app-openclash/files/usr/lib/lua/luci/controller/openclash.lua
+#change luci-app-frpc to vpn menu
+sed -i 's/"services"/"vpn"/g' package/lean/luci-app-frpc/luasrc/controller/frp.lua
+#change luci-app-nps to vpn menu
+sed -i 's/"services"/"vpn"/g' package/lean/luci-app-nps/luasrc/controller/nps.lua
+#change luci-app-openvpn-server to vpn menu
+sed -i 's/"services"/"vpn"/g' package/lean/luci-app-openvpn-server/luasrc/controller/openvpn-server.lua
+#chang luci-app-vssr to vpn menu
+sed -i 's/"services"/"vpn"/g' package/luci-app-vssr/luasrc/controller/vssr.lua
+#change luci-app-openvpn to vpn menu
+#sed -i 's/"services"/"vpn"/g' package/lean/luci-app-openvpn/luasrc/controller/openvpn.lua
