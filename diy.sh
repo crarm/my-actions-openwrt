@@ -34,5 +34,7 @@ sed -i 's/"services"/"vpn"/g' package/lean/luci-app-frpc/luasrc/controller/frp.l
 sed -i 's/"services"/"vpn"/g' package/lean/luci-app-nps/luasrc/controller/nps.lua
 #change luci-app-openvpn-server to vpn menu
 sed -i 's/"services"/"vpn"/g' package/lean/luci-app-openvpn-server/luasrc/controller/openvpn-server.lua
+#chang luci-app-vssr to vpn menu
+sed -i 's/"services"/"vpn"/g' openwrt/package/luci-app-vssr/luasrc/controller/vssr.lua
 #change luci-app-openvpn to vpn menu
 #sed -i 's/"services"/"vpn"/g' package/lean/luci-app-openvpn/luasrc/controller/openvpn.lua
