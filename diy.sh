@@ -2,9 +2,9 @@
 #=======================================
 #delete the same packages bettwen lienol and lean 
 #=======================================
-rm -rf package/lienol/lienol/ipt2socks
-rm -rf package/lienol/lienol/shadowsocksr-libev
-rm -rf package/lienol/lienol/pdnsd-alt
+rm -rf package/lienol/package/ipt2socks
+rm -rf package/lienol/package/shadowsocksr-libev
+rm -rf package/lienol/package/pdnsd-alt
 rm -rf package/lienol/package/verysync
 rm -rf package/lienol/package/ipt2socks
 rm -rf package/lienol/lienol/luci-app-verysync
@@ -17,7 +17,7 @@ rm -rf package/lean/v2ray
 rm -rf package/lean/v2ray-plugin
 rm -rf package/lean/luci-app-ipsec-vpnd
 rm -rf package/lean/luci-app-kodexplorer
-rm -rf package/lean/luci-app-pppoe-relay
+rm -rf package/lean/luci-app-pppoe-relayls
 rm -rf package/lean/luci-app-pptp-server
 rm -rf package/lean/luci-app-ramfree
 rm -rf package/lean/luci-app-softethervpn
@@ -35,6 +35,6 @@ sed -i 's/"services"/"vpn"/g' package/lean/luci-app-nps/luasrc/controller/nps.lu
 #change luci-app-openvpn-server to vpn menu
 sed -i 's/"services"/"vpn"/g' package/lean/luci-app-openvpn-server/luasrc/controller/openvpn-server.lua
 #chang luci-app-vssr to vpn menu
-sed -i 's/"services"/"vpn"/g' openwrt/package/luci-app-vssr/luasrc/controller/vssr.lua
+sed -i 's/"services"/"vpn"/g' package/luci-app-vssr/luasrc/controller/vssr.lua
 #change luci-app-openvpn to vpn menu
 #sed -i 's/"services"/"vpn"/g' package/lean/luci-app-openvpn/luasrc/controller/openvpn.lua
