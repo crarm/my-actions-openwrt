@@ -69,7 +69,8 @@ jobs:
         git clone https://github.com/rufengsuixing/luci-app-adguardhome openwrt/package/luci-app-adguardhome
         git clone https://github.com/Leo-Jo/luci-app-koolproxyR openwrt/package/luci-app-koolproxyR
         git clone https://github.com/jerrykuku/luci-app-vssr openwrt/package/luci-app-vssr
- 
+        git clone https://github.com/jerrykuku/lua-maxminddb openwrt/package/lua-maxminddb
+
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
@@ -88,9 +89,9 @@ jobs:
         cd openwrt
         ../$DIY_SH
         make defconfig
-    - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true'
+   # - name: SSH connection to Actions
+   #   uses: P3TERX/debugger-action@master
+   #   if: env.SSH_ACTIONS == 'true'
 
     - name: Download package
       id: package
