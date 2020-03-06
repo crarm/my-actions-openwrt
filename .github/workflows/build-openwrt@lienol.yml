@@ -77,10 +77,6 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true'
-      
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
@@ -89,9 +85,9 @@ jobs:
         cd openwrt
         ../$DIY_SH
         make defconfig
-   # - name: SSH connection to Actions
-   #   uses: P3TERX/debugger-action@master
-   #   if: env.SSH_ACTIONS == 'true'
+    - name: SSH connection to Actions
+      uses: P3TERX/debugger-action@master
+      if: env.SSH_ACTIONS == 'true'
 
     - name: Download package
       id: package
