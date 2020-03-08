@@ -67,7 +67,7 @@ jobs:
       run: |
         git clone https://github.com/vernesong/OpenClash openwrt/package/OpenClash
         git clone https://github.com/rufengsuixing/luci-app-adguardhome openwrt/package/luci-app-adguardhome
-        git clone https://github.com/Leo-Jo/luci-app-koolproxyR openwrt/package/luci-app-koolproxyR
+        git clone https://github.com/jefferymvp/luci-app-koolproxyR openwrt/package/luci-app-koolproxyR
         git clone https://github.com/jerrykuku/luci-app-vssr openwrt/package/luci-app-vssr
         git clone https://github.com/jerrykuku/lua-maxminddb openwrt/package/lua-maxminddb
 
